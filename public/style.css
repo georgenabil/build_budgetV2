@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #036ff473;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #036ff473;
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto 0px;
+}
+
+.table-content h2,
+.table-content h1 {
+  text-align: center;
+  color: #036ff473;
+}
+.table-content {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.navbar {
+  background: #036ff482;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  align-content: center;
+}
+.navbar .content {
+  width: 70%;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.navbar .content ul {
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+}
+.navbar .content ul li {
+  padding: 15px;
+}
+.navbar .content a {
+  text-decoration: none;
+  color: white;
+}
+.navbar .content .logo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.navbar .content .logo h1 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+.form-warper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #036ff482;
+}
+
+.form-warper .form-input {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  margin: 25px;
+}
+.form-warper .form-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-warper button {
+  width: 250px;
+  height: 50px;
+  color: white;
+  background-color: #036ff482;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.form-warper button:hover {
+  background-color: #0385f4ba;
+}
+.form-warper button:focus {
+  background-color: red;
+}
+
+.form-warper h2 {
+  margin-left: 25px;
+}
+
+.form-input input,
+.form-input select {
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid #0385f4ba;
+  outline: none;
+  padding-left: 10px;
+  width: 250px;
+}
+.form-warper .form-radio {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  margin: 25px;
+}
+
+.img-div {
+  width: 100%;
+}
+.img-div img {
+  width: 100%;
+}
