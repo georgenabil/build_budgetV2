@@ -21,7 +21,7 @@ $BalanceAmount =$Treasury->read()['Amount'];
 
 $message;
 
-if($BalanceAmount <= $Expense->Amount){
+if($BalanceAmount < $Expense->Amount){
     $message="the Amount in The Teasury Can`t afford these Expenses";
 }else{
  $NewAmount =$BalanceAmount-($Expense->Amount);

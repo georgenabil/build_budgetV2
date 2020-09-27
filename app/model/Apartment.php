@@ -23,6 +23,17 @@ public function read(){
         return $stmt;
 } 
 
+public function TotalCharges(){
+   
+   $query = 'SELECT  Apartment_id,Owner_name ,sum(Charges)As total ,Date FROM Receivables R ,Apartments A
+      WHERE A.Id=R.Apartment_id GROUP by Apartment_id';
+     
+     $stmt = $this->conn->prepare($query);
+      $stmt->execute();
+       
+        return $stmt;
+}
+
 
 
 public function create($Owner_name,$Apartment_number) {

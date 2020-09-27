@@ -34,7 +34,7 @@ $message;
 $Treasuryrow = $Treasury->read();
 $Apartmentstmt = $Apartment->read();
 $Receivablestmt = $Receivable->readWithDistinctApartments(); 
-
+$ApartmentTotalstmt = $Apartment->TotalCharges();
 
 ?>
 <div class="container">
@@ -71,6 +71,36 @@ $Receivablestmt = $Receivable->readWithDistinctApartments();
           <p><?= isset($message)? $message:null;?></p>  
          </form>
        </div>
-</div>
 
+ <br> <br>
+
+<div class="table-content"> 
+     <h2> Apartments Payments Summary </h2>
+     <table class="Apartments">
+       <tr>
+         <th>Apartment_id</th>
+         <th>Owner_name</th>
+         <th>Description</th>
+         <th>total</th>
+         <th>Date</th>
+       </tr>
+        
+     <?php while($ApartmentTotal = $ApartmentTotalstmt->fetch(PDO::FETCH_ASSOC)) { ?>
+         
+         <tr>
+         <td><?=$ApartmentTotal['Apartment_id'];?></td>
+         <td><?=$ApartmentTotal['Owner_name'];?></td>
+         <td>Total Monthly + Emergency </td>
+         <td><?=$ApartmentTotal['total'];?></td>
+         <td><?= date("Y-m-d H:i:s", $ApartmentTotal['Date']);?></td>
+       </tr>
+     
+     <?php } ?>
+       
+       
+     </table>
+    </div>
+     
+
+ </div>
 

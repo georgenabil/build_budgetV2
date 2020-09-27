@@ -9,7 +9,9 @@
  require_once APPLICATION_PATH.DS.'model'.DS.'Receivable.php';
  require_once APPLICATION_PATH.DS.'model'.DS.'Apartment.php';
  require_once APPLICATION_PATH.DS.'model'.DS.'Expense.php';
-
+ 
+ 
+ 
 
   $getUrl=getURL();
   $page = isset( $getUrl[0]) ?  $getUrl[0] : 'index';
@@ -30,6 +32,7 @@
   if(file_exists($view)){
     require $view;
   }else{
+   
     require $config['VIEW_PATH']."404.php";
   };
  

@@ -5,9 +5,7 @@
 	<meta http-equiv="expires" content="Sun, 01 Jan 2020 00:00:00 GMT"/>
     <meta http-equiv="pragma" content="no-cache" />
 	<title>Budget</title>
-  <link rel="stylesheet" href="../public/style.css">
-
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
  

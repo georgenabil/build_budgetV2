@@ -4,7 +4,7 @@
      
     if(isset($_REQUEST['url'])){  
        $url = rtrim($_REQUEST['url'],'/');
-       $url = rtrim($_REQUEST['url'],'.php');
+       $url=str_replace('.php','',$url);
        $url = explode('/',$url); 
        return $url;
     }
